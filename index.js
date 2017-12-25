@@ -15,3 +15,14 @@ const produceTipCalculator = function(tipPercent) {
     return checkAmount * tipPercent;
   }
 }
+
+const createDriver = function() {
+  let driverId = 0;
+
+  return class Driver {
+    constructor(name) {
+      this.name = name;
+      this.id = driverId++;
+    }
+  }
+}
