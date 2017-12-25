@@ -1,6 +1,6 @@
 const produceDrivingRange = function(blockRange) {
   return function(start, end) {
-    const distance = Math.abs(start.slice(0,2) - end.slice(0,2));
+    const distance = Math.abs(start.replace(/\D+/, '') - end.replace(/\D+/, ''));
     const difference = blockRange - distance;
     if (difference >= 0) {
       return `within range by ${difference}`;
